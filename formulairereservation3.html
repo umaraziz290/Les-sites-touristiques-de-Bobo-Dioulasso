@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style10.css" />
+    <title>Les sites touristiques de Bobo-Dioulasso</title>
+</head>
+
+<body id="top">
+    <div id="bloc_page">
+        <header>
+            <div id="titre_principale">
+                <img src="1234.png" width="100" height="90" alt="logo du groupe" id="logo"/>
+                <h1>Bobo Dioulasso et ses sites touristiques</h1>
+                
+            </div>
+            <nav class="navi">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Patrimoine3.html">Patrimoine</a></li>
+                    <li><a href="reservation d'hotel1.html">Réservation d'hôtel</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="titre">Formulaire de réservation à OASIS LAWAFOSSI</h1>
+        <div id="banniere_image">
+            <div id="banniere_description">
+                Remplissez les informations pour réserver votre séjour...
+            </div>
+        </div>
+
+        <section>
+            <img src="hotel3-1.jpg" alt="">
+            <img src="hotel3-2.jpg" alt="">
+            <img src="hotel3-3.jpg" alt="">
+            <img src="hotel3-4.jpg" alt="">
+            <h1>Réservez votre hôtel</h1>
+            <form action="confirmation_reservation.html" method="post" class="formulaire_reservation">
+                
+                <p><label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required></p>
+
+                <p><label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required></p>
+
+                <p><label for="email">Email:</label>
+                <input type="email" id="email" name="email" required></p>
+
+                <p><label for="telephone">Téléphone:</label>
+                <input type="tel" id="telephone" name="telephone" required></p>
+
+                <p><label for="checkin">Date d'arrivée:</label>
+                <input type="date" id="checkin" name="checkin" required></p>
+
+                <p><label for="checkout">Date de départ:</label>
+                <input type="date" id="checkout" name="checkout" required></p>
+
+                <p><label for="chambres">Nombre de chambres:</label>
+                <input type="number" id="chambres" name="chambres" min="1" max="10" required></p>
+
+                <p><label for="adultes">Nombre d'adultes:</label>
+                <input type="number" id="adultes" name="adultes" min="1" max="10" required></p>
+
+                <p><label for="enfants">Nombre d'enfants:</label>
+                <input type="number" id="enfants" name="enfants" min="0" max="10" required></p>
+
+                <input type="submit" value="Réserver">
+            </form>
+        </section>
+        
+        <a href="#top"><img src="top.png" alt="Retour en haut"></a>
+
+        <footer>
+            <div id="identite">
+                <h3>Identité des auteurs</h3>
+                <p>Bado Christ Anderson</p>
+                <p>Bodoma Yann Franck</p>
+                <p>Ouédraogo Umar Abd Al Aziz</p>
+                <p>Traoré Cheik Oumar</p>
+            </div>
+            <div id="contacte">
+                <h4>Contacts:</h4>
+                <p>+22606786718</p>
+                <p>+22674590401</p>
+            </div>
+            <div id="social_media">
+                <a href="https://www.facebook.com" target="_blank"><img src="facebook1.png" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com" target="_blank"><img src="whatsapp1.png" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="instagram1.png" alt="Instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const hotel = urlParams.get('hotel');
+            document.getElementById('hotel').value = hotel;
+        }
+    </script>
+</body>
+</html>
